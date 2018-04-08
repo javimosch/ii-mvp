@@ -4,36 +4,12 @@ require('dotenv').config({
   silent: true
 });
 
-
-function getStaticRoutes() {
-  let p = path.join(process.cwd(), 'assets', 'routes.json');
-  if (!sander.existsSync(p)) {
-    throw new Error('Not found: ' + p);
-  }
-  //let res = sander.readFileSync(p).toString('utf-8');
-  //res = JSON.parse(res);
-  //res = res.nodes.filter(i => (!i.ssr || i.ssr !== false) && i.path != undefined).map(i => i.path)
-  let res = [];
-  res = res.concat([
-    '/mockup/1',
-    '/mockup/2',
-    'admin/login',
-    'admin/dash',
-    'admin/fields',
-    'admin/benefits'
-  ]);
-  console.log('STATIC ROUTES', res);
-  return res;
-}
-
-getStaticRoutes();
-
 module.exports = {
   /*
    ** Headers of the page
    */
   head: {
-    title: 'Tous Mes Droits',
+    title: 'Incubadora Itinerante',
     meta: [{
       charset: 'utf-8'
     }, {
@@ -124,8 +100,8 @@ module.exports = {
   },
   manifest: {
     display: 'standalone',
-    name: 'tous mes droits',
-    lang: 'fr'
+    name: 'incubadora itinerante',
+    lang: 'es'
   },
   render: {
     ssr: true

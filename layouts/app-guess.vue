@@ -20,6 +20,10 @@ export default {
   }
 }
 </script>
-<style>
-
+<style lang="scss">
+html,body{
+  background: url(https://source.unsplash.com/WLUHO9A_xik/1600x900);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
