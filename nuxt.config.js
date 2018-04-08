@@ -36,6 +36,8 @@ module.exports = {
     ],
     script: [{
       src: 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js'
+    },{
+      src:'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-ULEyPjaXaPYPyeMRG6jEfz3AqYkEBjE&libraries=places'
     }]
   },
   /*
@@ -77,6 +79,9 @@ module.exports = {
     ssr: false
   },{
     src: '@/plugins/vue-good-table',
+    ssr: false
+  },{
+    src: '@/plugins/autocomplete',
     ssr: false
   }],
   css: [
