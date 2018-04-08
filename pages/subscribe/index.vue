@@ -20,7 +20,7 @@
           <textarea class="form-control"></textarea>
         </div>
         <div class="col-12 mt-2">
-          <b-btn variant="success"
+          <b-btn class="SendButton" variant="success"
                  size="lg">Enviar</b-btn>
         </div>
       </div>
@@ -67,4 +67,7 @@ export default {
 
 <style lang="scss" scoped="">
 .Subscribe {}
+	.SendButton{
+		background-color:$color2;
+	}
 </style>

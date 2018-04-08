@@ -1,7 +1,7 @@
 <template>
 	<div class="Header mb-4">
 		<div>
-			<img class="mx-auto d-block mt-2" :src="logo" />
+			<img class="mx-auto d-block mt-0" :src="logo" />
 		</div>
 		<div v-if="nav" class="nav mx-auto d-block mt-2">
 		  <b-nav class="" justified tabs>
@@ -42,6 +42,9 @@ export default {
 		max-width:800px
 	}
 	img{
-		max-width:100px;
+		max-width:150px;
+	}
+	.Header{
+		background: #FFF7F0;
 	}
 </style>
