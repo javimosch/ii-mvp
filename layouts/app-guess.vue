@@ -27,8 +27,14 @@ export default {
 html,body{
   margin:0px;
   padding:0px;
-  background: url(https://source.unsplash.com/WLUHO9A_xik/1600x900);
+  background: url(https://source.unsplash.com/X-dQS194kTs/1600x900);
     background-repeat: no-repeat;
+    background-size: contain;
+    @media only screen and (max-width: 768px) {
     background-size: cover;
+  }
+    @media only screen and (min-width: 1400px) {
+    background-size: cover;
+  }
 }
 </style>

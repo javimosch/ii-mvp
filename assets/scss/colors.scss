@@ -1,0 +1,12 @@
+$color1: #314A5E; /*black*/
+$color2: #ED4A71; /*red*/
+$color3: #FED06E; /*claro1*/ 
+$color4: #24D5A1; /*claro2*/
+$color5: #1D8BB0; /*azulado*/
+$color6: white;
+
+
+.noty_theme__mint.noty_type__info, .noty_theme__mint.noty_type__information {
+    background-color: $color5;
+    border-bottom: 1px solid $color5;
+}
