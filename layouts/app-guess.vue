@@ -27,7 +27,7 @@ export default {
 html,body{
   margin:0px;
   padding:0px;
-  background: url(https://source.unsplash.com/X-dQS194kTs/1600x900);
+  background: url(https://source.unsplash.com/vfzfavUZmfc/1600x900);
     background-repeat: no-repeat;
     background-size: contain;
     @media only screen and (max-width: 768px) {
