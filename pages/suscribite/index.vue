@@ -5,7 +5,7 @@
       <img class="SectionImage img-fluid" :src="OurResourcesImage"/>
     </Section>
 
-    <Section title="" :inverted="true" class="ParallaxBlock mt-5 mb-5" :css="'background-color:transparent;'">
+    <Section title="" :inverted="true" class="ParallaxBlock mt-5 mb-5 d-none d-md-block" :css="'background-color:transparent;'">
     </Section>
 
 </div>
