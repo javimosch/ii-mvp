@@ -18,7 +18,14 @@ module.exports = {
     }, {
       hid: 'description',
       name: 'description',
-      content: ''
+      content: 'Incubadora itinerante que ayuda a emprendedores, asociaciones, cooperativas a desarrollar proyectos en America Latina. Herramientas, consejos y mentoria en estrategia, estudio de mercado, marketing, business development, web development.'
+    },{
+      hid: 'og:description',
+      name: 'og:description',
+      content: 'Incubadora itinerante que ayuda a emprendedores, asociaciones, cooperativas a desarrollar proyectos en America Latina. Herramientas, consejos y mentoria en estrategia, estudio de mercado, marketing, business development, web development.'
+    },{
+      name:'keywords',
+      content: 'Emprendimiento, incubadora, mentoria, consejo, asociación, cooperativa, alternativo, economía social, ecosistema, desarrollo, marketing, comunicación, negocio.'
     }],
     link: [
       /*{

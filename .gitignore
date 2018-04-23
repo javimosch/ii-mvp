@@ -12,4 +12,5 @@ dist
 
 sw.*
 .env
+yarn-error.log
 
