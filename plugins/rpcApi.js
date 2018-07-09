@@ -1,5 +1,6 @@
 import axios from 'axios'
-
+import {client as createWrapkendClient} from 'wrapkend-cli'
+const wrapkend = createWrapkendClient(process.env.WRAPKEND_API_KEY||'KXSG4jIx5IhqmR1Et59tLPimJy1zFt6xitXMMbz9');
 const instance = axios.create({
 	baseURL: process.env.RPC_ENDPOINT
 });
@@ -15,6 +16,10 @@ export async function sync(){
 		actions,
 		namesList: actions.map(a=>a.text)
 	};
+}
+
+export async function wrapkendCall(name, data){
+	return wrapkend(name,data)
 }
 
 export async function call(name, data){

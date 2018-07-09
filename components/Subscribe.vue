@@ -32,6 +32,12 @@
                         class="form-control"></textarea>
             </div>
             <div class="col-12 mt-2">
+              <label>Duración</label>
+              <textarea v-model="helpDuration"
+                        placeholder="Ya tenes una idea de como te gustaria que te ayudemos?"
+                        class="form-control"></textarea>
+            </div>
+            <div class="col-12 mt-2">
               <label>Contacto (*)</label>
               <textarea v-model="contactText"
                         placeholder="Tu email, whatsapp o otra forma conveniente para comunicarnos."
@@ -55,7 +61,7 @@
 
 <script>
 import NoSSR from 'vue-no-ssr';
-import { call } from '@/plugins/rpcApi';
+import { call, wrapkendCall } from '@/plugins/rpcApi';
 export default {
   name: 'Subscribe',
   props: [],
@@ -65,7 +71,8 @@ export default {
       description: '',
       address: '',
       contactText: '',
-      helpDescription: ''
+      helpDescription: '',
+      helpDuration:''
     }
   },
   async asyncData() {
@@ -83,17 +90,16 @@ export default {
     },
     async Send() {
       try {
-        // let d = await call('saveRecord', Object.assign({}, this.$data, {
-        // model: 'project'
-        // }))
-        // console.info(d)
+        let r = await wrapkendCall('saveProject',this.$data)
 
         this.$noty.info('Muchisimas gracias, nos pondremos en contacto contigo los mas pronto posible!', {
           killer: true,
           timeout: null,
           layout: 'bottomLeft'
         })
-        return
+        
+        console.info(r)
+
         var self = this
         Object.keys(self.$data).forEach(k => {
           self.$data[k] = ''

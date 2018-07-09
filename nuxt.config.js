@@ -44,7 +44,9 @@ module.exports = {
     script: [{
       src: 'https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js'
     },{
-      src:'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-ULEyPjaXaPYPyeMRG6jEfz3AqYkEBjE&libraries=places'
+      src:'https://maps.googleapis.com/maps/api/js?key=AIzaSyC-ULEyPjaXaPYPyeMRG6jEfz3AqYkEBjE&libraries=places&v=3.exp&sensor=false'
+    },{
+      src:'https://www.gstatic.com/firebasejs/5.1.0/firebase.js'
     }]
   },
   /*
@@ -58,7 +60,8 @@ module.exports = {
     'bootstrap-vue/nuxt',
     '@nuxtjs/font-awesome', ['nuxt-sass-resources-loader', {
       resources: path.join(process.cwd(), 'assets/scss/main.scss')
-    }],
+    },
+    ],
   ],
   env: {
     basicAuthPassword: process.env.basicAuthPassword||'secret',
@@ -89,6 +92,9 @@ module.exports = {
     ssr: false
   },{
     src: '@/plugins/autocomplete',
+    ssr: false
+  },{
+    src: '@/plugins/firebase',
     ssr: false
   }],
   css: [
