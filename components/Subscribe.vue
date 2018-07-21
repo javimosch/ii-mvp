@@ -130,7 +130,13 @@ export default {
       analytics.page();
       }}();
   },
-  mounted() {}
+  mounted() {
+
+      try{
+        call('wakeup-heroku',{}) // to take up heroku
+      }catch(err){}
+
+  }
 }
 
 </script>
